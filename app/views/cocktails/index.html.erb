@@ -1,23 +1,19 @@
 
-<h3>Señor Cocktail</h3>
-<%= link_to 'New cocktail', new_cocktail_path, class: "btn btn-outline-dark mb-3" %>
 
 <div class="container">
-<% @cocktails.each do |cocktail| %>
-  <div class="d-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"><%= cocktail.name %></h2>
-          <p class="lead">And an even wittier subheading.</p>
+  <div class="column-left m-5">
+    <h3>Señor Cocktail</h3>
+    <%= link_to 'New cocktail', new_cocktail_path, class: "btn btn-dark btn-sm btn-block" %>
+  </div>
+  <div class="container-drinks">
+    <div class="card-container">
+      <% @cocktails.each do |cocktail| %>
+        <div class="card">
+            <img src="https://source.unsplash.com/random/250x350">
+            <h4><%= cocktail.name %></h4>
+            <%= link_to 'View', cocktail %>
         </div>
-        <div class="bg-dark box-shadow mx-auto" style="width: 90%; height: 300px; border-radius: 21px 21px 0 0;">
-          <%= link_to 'View', cocktail %>
-          <% cocktail.doses.each do |dose| %>
-            <p style= "color: white"> <%= dose.description %></p>
-            <p> <%= dose.ingredient.name %> </p>
-          <% end %>
-        </div>
-      </div>
+      <% end %>
     </div>
-<% end %>
+  </div>
 </div>

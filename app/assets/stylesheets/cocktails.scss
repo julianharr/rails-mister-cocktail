@@ -1,3 +1,64 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+$old-rose: #B97375;
+$ivory: #FBFFF1;
+
+
+.container {
+  display: flex;
+  height: 800px;
+  margin: 100px auto;
+  padding: 0;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #c67b7d, #a76869);
+  box-shadow:  6px 6px 45px #9b6162,
+             -6px -6px 45px #d78588;
+}
+
+.column-left {
+  color: $ivory;
+  width: 40%;
+}
+
+.btn {
+  width: 150px;
+}
+
+.container-drinks {
+  border-radius: 0 5px 5px 0;
+  background-color: #FFFFFF;
+  overflow: scroll;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  height: 250px;
+  width: 350px;
+  margin: 16px 40px 40px 0;
+  border: none;
+  box-shadow:  5px 5px 8px #e3e3e3,
+             -5px -5px 8px #ffffff;
+    img {
+      border-radius: 2px;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    h4 {
+      margin: 8px;
+      font-size: 24px;
+    }
+
+    a {
+      margin: 4px 8px;
+    }
+}
+
+

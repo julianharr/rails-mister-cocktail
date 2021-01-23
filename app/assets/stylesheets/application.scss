@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+$old-rose: #B97375;
+$ivory: #FBFFF1;
+
+body {
+  background-color: $old-rose;
+}
