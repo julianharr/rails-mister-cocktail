@@ -4,6 +4,7 @@
     <div class="container-nav p-3">
       <h1>SPIRITS</h1>
       <%= link_to 'Back', cocktails_path, class: "btn-sm btn-dark" %>
+      <%= link_to 'Remove', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger px-2" %>
     <hr />
     </div>
     <div class="container-info p-3">
@@ -15,7 +16,7 @@
           <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-dark" %>
         </div>
       <% end %>
-      <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+      <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-view" %>
     </div>
   </div>
 

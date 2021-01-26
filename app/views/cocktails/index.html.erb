@@ -4,18 +4,21 @@
     <h1>SPIRITS</h1>
     <hr>
     </div>
-    <%= link_to 'New cocktail', new_cocktail_path, class: "btn btn-outline-light" %>
+    <%= link_to 'Create new', new_cocktail_path, class:"btn btn-default mb-3" %>
+    <button class="btn btn-search">Search</button>
   </div>
 
     <div class="card-container">
+      <div class="container-fluid">
+        <img src="https://images.unsplash.com/photo-1611180444911-88e02b9ef518?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1714&q=80">
+      </div>
       <% @cocktails.each do |cocktail| %>
         <div class="card">
             <h4><%= cocktail.name %> <br>
             <%= cocktail.rating = '✰' * rand(1..5)%>
             </h4>
             <div class="container-options d-flex">
-              <%= link_to 'View', cocktail, class: "btn btn-outline-primary btn-sm" %>
-              <%= link_to 'Remove', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %>
+              <%= link_to 'View', cocktail, class: "btn-sm btn-view px-4" %>
             </div>
         </div>
       <% end %>

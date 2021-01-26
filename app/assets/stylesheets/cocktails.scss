@@ -4,7 +4,8 @@
 
 $old-rose: #6689A1;
 $ivory: #FBFFF1;
-
+$btn-danger: #E8524A;
+$btn-view: #63E3B0;
 
 .container {
   display: flex;
@@ -12,13 +13,18 @@ $ivory: #FBFFF1;
   height: 800px;
   margin: 100px auto;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 1px;
   background: $old-rose;
   box-shadow:  14px 14px 0px #3d5261,
              -14px -14px 0px #8fc0e1;
     h1 {
       font-family: 'Teko', serif;
       font-size: 80px;
+      text-shadow: 2px 4px #3d5261;
+    }
+
+    a {
+      text-decoration: none;
     }
 }
 
@@ -28,7 +34,7 @@ $ivory: #FBFFF1;
   justify-content: center;
   width: 50%;
   margin: 200px auto;
-  border-radius: 5px;
+  border-radius: 1px;
   background: $old-rose;
   box-shadow:  14px 14px 0px #3d5261,
              -14px -14px 0px #8fc0e1;
@@ -41,6 +47,10 @@ $ivory: #FBFFF1;
       font-family: 'Oswald', sans-serif;
       font-weight: 400;
       color: $ivory
+    }
+
+    a {
+      text-decoration: none;
     }
 }
 
@@ -89,14 +99,61 @@ $ivory: #FBFFF1;
   width: 150px;
 }
 
+.btn-info {
+  background-color: $btn-view;
+}
+
+.btn-view {
+  background-color: $btn-view;
+  color: $ivory;
+  &:hover {
+      background-color: #63E3B0;
+      color: $ivory;
+    }
+}
+
+.btn-default {
+  background-color: #08415C;
+  color: $ivory;
+    &:hover {
+      background-color: #0A5071;
+      color: $ivory;
+    }
+}
+
+.btn-search {
+  background-color: #5C67FF;
+  color: $ivory;
+    &:hover {
+      background-color: #4754FF;
+      color: $ivory;
+    }
+}
+
+.btn-danger {
+  background-color: $btn-danger;
+}
+
 .card-container {
-  width: 75%;
+  width: 80%;
   overflow: scroll;
   background-color: #E1E8F4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 0 4px 4px 0;
+  border-radius: 1px;
+    img {
+      width: 740px;
+      height: 500px;
+      margin-left: 52px;
+      overflow: hidden;
+      border-radius: 1px;
+      margin-top: 16px;
+      margin-bottom: 40px;
+      box-shadow:  5px 5px 0px #bebebe,
+             -5px -5px 0px #ffffff;
+      object-fit: cover;
+    }
 }
 
 .card {
@@ -104,12 +161,12 @@ $ivory: #FBFFF1;
   flex-direction: column;
   width: 350px;
   margin: 16px 40px 40px 0;
-  border-radius: 8px;
+  border-radius: 1px;
   border: none;
   padding: 8px;
   background: #E1E8F4;
-  box-shadow:  5px 5px 9px #d1d8e3,
-             -5px -5px 9px #f1f8ff;
+  box-shadow:  5px 5px 0px #a9aeb7,
+             -5px -5px 0px #ffffff;
     h4 {
       margin: 8px;
       font-size: 28px;
