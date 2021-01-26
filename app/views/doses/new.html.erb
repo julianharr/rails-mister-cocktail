@@ -1,15 +1,26 @@
-<div class="container col-6-offset-3">
-  <h1><%=  @cocktail.name %></h1>
-  <div>
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.input :description, as: :text %>
-    <%= f.association :ingredient %>
-    <%= f.submit "Add the Dose", class: "btn btn-primary" %>
-    <% end %>
-    <div>
+<div class="container-show">
+  <div class="container-main m-3">
+  <div class="column-left mr-5">
+    <div class="container-nav">
+      <h3>SPIRITS</h3>
+      <%= link_to 'Back', cocktails_path, class: "btn-sm btn-dark" %>
+    <hr />
+    </div>
+    <div class="container-info pr-3">
+      <h3><%= @cocktail.name %></h3>
+      <div>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.input :description, as: :text %>
+          <%= f.association :ingredient %>
+          <%= f.submit "Add the Dose", class: "btn btn-primary" %>
+        <% end %>
+      <div>
     </div>
   </div>
+
+  </div>
 </div>
-<div class="text-center">
-    <%= link_to 'Back', cocktails_path, class: 'btn btn-primary' %>
+  <div class="column-right ml-5">
+    <img src="<%= @cocktail.image %>">
+  </div>
 </div>

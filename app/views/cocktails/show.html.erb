@@ -1,10 +1,9 @@
 <div class="container-show">
   <div class="container-main">
   <div class="column-left m-3">
-
     <div class="container-nav p-3">
-      <h3>Señor Cocktail</h3>
-      <%= link_to 'Cocktails', cocktails_path, class: "btn btn-outline-dark" %>
+      <h1>SPIRITS</h1>
+      <%= link_to 'Back', cocktails_path, class: "btn-sm btn-dark" %>
     <hr />
     </div>
     <div class="container-info p-3">
@@ -20,7 +19,7 @@
     </div>
   </div>
 
-  <div class="column-right">
+  <div class="column-right ml-5">
     <img src="<%= @cocktail.image %>">
   </div>
   </div>

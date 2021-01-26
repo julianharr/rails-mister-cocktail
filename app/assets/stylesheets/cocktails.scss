@@ -16,17 +16,32 @@ $ivory: #FBFFF1;
   background: $old-rose;
   box-shadow:  14px 14px 0px #3d5261,
              -14px -14px 0px #8fc0e1;
+    h1 {
+      font-family: 'Teko', serif;
+      font-size: 80px;
+    }
 }
 
 .container-show {
   display: flex;
   height: 500px;
+  justify-content: center;
   width: 50%;
   margin: 200px auto;
   border-radius: 5px;
   background: $old-rose;
   box-shadow:  14px 14px 0px #3d5261,
              -14px -14px 0px #8fc0e1;
+    h1 {
+      font-family: 'Teko', serif;
+      font-size: 70px;
+    }
+
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      color: $ivory
+    }
 }
 
 .container-main {
@@ -49,12 +64,12 @@ $ivory: #FBFFF1;
   display: flex;
   justify-content: center;
   align-items: center;
-
   img {
+
     width: 350px;
     border-radius: 4px;
     box-shadow:  14px 14px 97px #486172,
-             -14px -14px 97px #84b1d0;
+             -7px -7px 50px #84b1d0;
   }
 }
 
@@ -97,7 +112,11 @@ $ivory: #FBFFF1;
              -5px -5px 9px #f1f8ff;
     h4 {
       margin: 8px;
-      font-size: 24px;
+      font-size: 28px;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      color: #3D405B;
+      text-shadow: 2px 2px $ivory;
     }
 
     a {

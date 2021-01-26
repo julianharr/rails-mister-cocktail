@@ -1,20 +1,10 @@
-
-
-<div class="container-fluid m-5">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
+<div class="container-show">
+  <div class="row d-flex align-items-center mb-5">
     <%= simple_form_for(@cocktail) do |f| %>
-
-      <div class="form-inputs">
         <%= f.input :name %>
-      </div>
-
-      <div class="form-actions">
-        <%= f.button :submit, class: "btn btn-dark"%>
-        <%= link_to 'Cocktails', cocktails_path, class: "btn btn-info" %>
-      </div>
+        <%= f.input :rating %>
+        <%= f.submit 'Create Drink', class:"btn btn-info mr-3"%>
+        <%= link_to 'Back', cocktails_path, class: "btn btn-dark" %>
     <% end %>
-
     </div>
-  </div>
 </div>
