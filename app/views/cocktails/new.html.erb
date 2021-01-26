@@ -3,6 +3,7 @@
     <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
         <%= f.input :rating %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit 'Create', class:"btn btn-info mr-3"%>
         <%= link_to 'Back', cocktails_path, class: "btn btn-dark" %>
     <% end %>
