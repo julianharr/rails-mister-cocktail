@@ -2,63 +2,106 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-$old-rose: #B97375;
+$old-rose: #6689A1;
 $ivory: #FBFFF1;
 
 
 .container {
   display: flex;
+  justify-content: space-between;
   height: 800px;
   margin: 100px auto;
   padding: 0;
   border-radius: 5px;
-  background: linear-gradient(145deg, #c67b7d, #a76869);
-  box-shadow:  6px 6px 45px #9b6162,
-             -6px -6px 45px #d78588;
+  background: $old-rose;
+  box-shadow:  14px 14px 0px #3d5261,
+             -14px -14px 0px #8fc0e1;
+}
+
+.container-show {
+  display: flex;
+  height: 500px;
+  width: 50%;
+  margin: 200px auto;
+  border-radius: 5px;
+  background: $old-rose;
+  box-shadow:  14px 14px 0px #3d5261,
+             -14px -14px 0px #8fc0e1;
+}
+
+.container-main {
+  display: flex;
+  padding: 18px;
 }
 
 .column-left {
   color: $ivory;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+    .container-nav {
+      margin: 16px 0px;
+    }
+  overflow: scroll;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 350px;
+    border-radius: 4px;
+    box-shadow:  14px 14px 97px #486172,
+             -14px -14px 97px #84b1d0;
+  }
+}
+
+.container-doses {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    a {
+      text-decoration: none;
+    }
 }
 
 .btn {
   width: 150px;
 }
 
-.container-drinks {
-  border-radius: 0 5px 5px 0;
-  background-color: #FFFFFF;
-  overflow: scroll;
-}
-
 .card-container {
+  width: 75%;
+  overflow: scroll;
+  background-color: #E1E8F4;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border-radius: 0 4px 4px 0;
 }
 
 .card {
-  height: 250px;
+  display: flex;
+  flex-direction: column;
   width: 350px;
   margin: 16px 40px 40px 0;
+  border-radius: 8px;
   border: none;
-  box-shadow:  5px 5px 8px #e3e3e3,
-             -5px -5px 8px #ffffff;
-    img {
-      border-radius: 2px;
-      object-fit: cover;
-      overflow: hidden;
-    }
-
+  padding: 8px;
+  background: #E1E8F4;
+  box-shadow:  5px 5px 9px #d1d8e3,
+             -5px -5px 9px #f1f8ff;
     h4 {
       margin: 8px;
       font-size: 24px;
     }
 
     a {
-      margin: 4px 8px;
+      margin: 8px 5px;
     }
 }
-
 

@@ -1,17 +1,27 @@
-<%= link_to 'Cocktails', cocktails_path %>
- <div class="d-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"><%= @cocktail.name %></h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark box-shadow mx-auto" style="width: 90%; height: 300px; border-radius: 21px 21px 0 0;">
-          <% @cocktail.doses.each do |dose| %>
-            <p style= "color: white"> <%= dose.description %> <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-            <p> <%= dose.ingredient.name %> </p>
-          <% end %>
-        </div>
+<div class="container-show">
+  <div class="container-main">
+  <div class="column-left m-3">
 
-        <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-outline-info" %>
-      </div>
+    <div class="container-nav p-3">
+      <h3>Señor Cocktail</h3>
+      <%= link_to 'Cocktails', cocktails_path, class: "btn btn-outline-dark" %>
+    <hr />
+    </div>
+    <div class="container-info p-3">
+      <h3><%= @cocktail.name %></h3>
+      <% @cocktail.doses.each do |dose| %>
+        <div class="container-doses">
+          <h5> <%= dose.ingredient.name %> </h5>
+          <p><%= dose.description %> </p>
+          <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-dark" %>
+        </div>
+      <% end %>
+      <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-info" %>
+    </div>
   </div>
+
+  <div class="column-right">
+    <img src="<%= @cocktail.image %>">
+  </div>
+  </div>
+</div>
