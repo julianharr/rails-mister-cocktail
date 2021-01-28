@@ -10,7 +10,7 @@ $btn-view: #63E3B0;
 .container {
   display: flex;
   justify-content: space-between;
-  height: 800px;
+  height: 850px;
   margin: 100px auto;
   padding: 0;
   border-radius: 1px;
@@ -65,9 +65,9 @@ $btn-view: #63E3B0;
   flex-direction: column;
   height: 90%;
     .container-nav {
-      margin: 16px 0px;
+      margin: 16px;
     }
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .column-right {
@@ -140,7 +140,7 @@ $btn-view: #63E3B0;
 }
 
 .card-container {
-  width: 80%;
+  width: 100%;
   overflow: scroll;
   background-color: #E1E8F4;
   display: flex;
@@ -148,9 +148,10 @@ $btn-view: #63E3B0;
   justify-content: center;
   border-radius: 1px;
     img {
-      width: 740px;
+      width: 100%;
+      // width: 740px;
       height: 500px;
-      margin-left: 52px;
+      // margin-left: 52px;
       overflow: hidden;
       border-radius: 1px;
       margin-top: 16px;
