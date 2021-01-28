@@ -2,13 +2,13 @@
   <div class="container-main">
   <div class="column-left m-3">
     <div class="container-nav p-3">
-      <h1>SPIRITS</h1>
+      <h1><%= @cocktail.name %></h1>
       <%= link_to 'Back', cocktails_path, class: "btn-sm btn-dark" %>
       <%= link_to 'Remove', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger px-2" %>
     <hr />
     </div>
     <div class="container-info p-3">
-      <h3><%= @cocktail.name %></h3>
+      <h3>Ingredients</h3>
       <% @cocktail.doses.each do |dose| %>
         <div class="container-doses">
           <h5> <%= dose.ingredient.name %> </h5>
