@@ -15,9 +15,11 @@
 
         <% @cocktails[0..2].each do %>
         <% @cocktails.each do |cocktail| %>
-          <div class="card">
-              <h4><%= cocktail.name %> <br>
-              <%= cocktail.rating %>
+          <div class="card-cocktail">
+              <h4><%= cocktail.name %>
+                <% if cocktail.rating %> <br>
+                Rating: <%= cocktail.rating %>
+                <% end %>
               </h4>
               <div class="container-options d-flex">
                 <%= link_to 'View', cocktail, class: "btn-sm btn-view px-4" %>
@@ -25,8 +27,8 @@
           </div>
         <% end %>
         <div class="container-fluid">
-        <% random_image = rand(1..71) %>
-        <img src="https://source.unsplash.com/collection/96656859?sig=<%=random_image%>">
+        <% random_identififer = rand(1..100) %>
+        <img src="https://source.unsplash.com/collection/96656859?sig=<%=random_identififer%>">
       </div>
       <% end %>
     </div>

@@ -1,24 +1,30 @@
-// Specific CSS for your home-page
 $old-rose: #6689A1;
 $ivory: #FBFFF1;
 
-.container {
+.container-show {
   display: flex;
-  justify-content: space-between;
-  height: 850px;
-  margin: 100px auto;
-  padding: 0;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  width: 80%;
+  margin: 200px auto;
   border-radius: 1px;
   background: $old-rose;
   box-shadow:  14px 14px 0px #3d5261,
              -14px -14px 0px #8fc0e1;
     h1 {
       font-family: 'Teko', serif;
-      font-size: 80px;
-      text-shadow: 2px 4px #3d5261;
+      font-size: 70px;
+    }
+
+    h3 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      color: $ivory
     }
 
     a {
       text-decoration: none;
     }
 }
+

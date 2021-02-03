@@ -1,27 +1,19 @@
 <div class="container-show">
-  <div class="container-main">
-  <div class="column-left m-3">
-    <div class="container-nav p-3">
-      <h1><%= @cocktail.name %></h1>
+  <div class="card">
+    <!-- replace this image with # cl_image_tag @cocktail.photo.key, crop: :fill %> -->
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1607344635159-59930e3330b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Image of cocktail">
+    <div class="card-body">
+      <h1 class="card-title"><%= @cocktail.name %></h1>
       <%= link_to 'Back', cocktails_path, class: "btn-sm btn-dark" %>
       <%= link_to 'Remove', cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger px-2" %>
-    <hr />
-    </div>
-    <div class="container-info p-3">
-      <h3>Ingredients</h3>
+      <hr>
+      <p class="card-text">
       <% @cocktail.doses.each do |dose| %>
-        <div class="container-doses">
-          <h5> <%= dose.ingredient.name %> </h5>
-          <p><%= dose.description %> </p>
-          <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-dark" %>
-        </div>
+          <%= dose.ingredient.name %> - <%= dose.description %> |
+          <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %> <br>
       <% end %>
-      <%= link_to 'New Dose', new_cocktail_dose_path(@cocktail), class: "btn btn-view" %>
+      <%= link_to 'Add', new_cocktail_dose_path(@cocktail), class: "btn-sm btn-view" %>
+      </p>
     </div>
-  </div>
-
-  <div class="column-right ml-5">
-    <%= cl_image_tag @cocktail.photo.key, crop: :fill %>
-  </div>
   </div>
 </div>

@@ -12,12 +12,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "components/container";
+@import "components/container_show";
 
 $old-rose: #6689A1;
 $ivory: #FBFFF1;
 
 body {
-  background-color: $old-rose;
+  background: rgb(103,137,161);
+  background: linear-gradient(97deg, rgba(103,137,161,1) 14%, rgba(0,140,255,1) 100%);
+
   font-family: 'Montserrat', sans-serif;
 }
